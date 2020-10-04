@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  width: fit-content;
+  text-align: left;
+  height: 3em;
+
+  label {
+    font-size: small;
+    color: gray;
+    visibility: hidden;
+    position: relative;
+    transition: 0.2s bottom, 0.4s opacity;
+    bottom: 0;
+    opacity: 0;
+    padding-left: 0.7em;
+  }
+
+  input {
+    position: relative;
+    border: 1px;
+    border-style: solid;
+    border-color: gray;
+    border-radius: 20px;
+    background-color: lightgray;
+
+    padding-left: 0.5em;
+    margin-top: 1.5em;
+
+    font-size: 1em;
+  }
+
+  input:focus {
+    background-color: white;
+  }
+
+  input:focus + label {
+    visibility: visible;
+    bottom: 3em;
+    opacity: 1;
+  }
+  
+  .label_show {
+    visibility: visible;
+  }
+
+  label.label_hide {
+    visibility: hidden;
+  }
+
+  // input:not(:focus) + label {
+  //   opacity: 0;
+  // }
+}
