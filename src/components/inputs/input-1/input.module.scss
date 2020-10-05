@@ -11,7 +11,7 @@
     color: gray;
     visibility: hidden;
     position: relative;
-    transition: 0.2s bottom, 0.4s opacity;
+    transition: 0.4s bottom, 0.2s opacity;
     bottom: 0;
     opacity: 0;
     padding-left: 0.7em;
@@ -40,16 +40,14 @@
     bottom: 3em;
     opacity: 1;
   }
-  
+
+  input:not(:focus) + label {
+    bottom: 2em;
+  }
+
   .label_show {
     visibility: visible;
+    bottom: 3em !important;
+    opacity: 1;
   }
-
-  label.label_hide {
-    visibility: hidden;
-  }
-
-  // input:not(:focus) + label {
-  //   opacity: 0;
-  // }
 }
