@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import s from "./input.module.scss";
 
 const Input = (props) => {
-  const { title, getValue, inputBg, labelColor } = props;
+  const { title, getValue, inputBg, labelColor, placeholderColor } = props;
   const [value, setValue] = useState("");
   const [placeholder, setPlaceholder] = useState(title);
 
@@ -20,8 +20,15 @@ const Input = (props) => {
     getValue(value);
   }, [getValue, value]);
 
-  const inputStyle = { backgroundColor: inputBg }
-  const labelStyle = { color: labelColor }
+  const inputStyle = {
+    backgroundColor: inputBg,
+    ".input::placeholder": { color: placeholderColor },
+  };
+  const labelStyle = { color: labelColor };
+
+  const placeholderStyle = () => ({
+    '.input::placeholder': placeholderColor
+  })
 
   return (
     <div className={s.container}>
