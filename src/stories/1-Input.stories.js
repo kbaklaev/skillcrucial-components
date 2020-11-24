@@ -10,7 +10,8 @@ export const testInput = () => (
   <Input
     title="Username"
     getValue={(str) => console.log(str)}
-    inputBg='red'
-    labelColor='red' 
+    inputBg='lightgray'
+    labelColor='red'
+    placeholderColor='red'
   />
 );
